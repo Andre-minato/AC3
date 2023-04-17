@@ -9,7 +9,6 @@ def nao_entre_em_panico():
     candPrimo = 3
     qtdEncontrados = 2
     ehPrimo = 1
-    numeros_primos = []
 
     while qtdEncontrados < qtdTotal:
         for i in range (2, candPrimo):
@@ -19,13 +18,12 @@ def nao_entre_em_panico():
         if ehPrimo == 1:
             primos = primos + str(candPrimo)+","
             qtdEncontrados += 1
-            # if qtdEncontrados % 10 == 0:
-            #     primos += "<br>"
+            if qtdEncontrados % 10 == 0:
+                primos += "<br>"
         ehPrimo = 1
         candPrimo += 1
 
-    numeros_primos.append(primos)
-    return numeros_primos
+    return primos
 
 if __name__ == "__main__":
     app.run(host='localhost', port=5050)
